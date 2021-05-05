@@ -38,10 +38,9 @@ b) Niveau Moyen
       
 c) Niveau Difficile
 
-Pour ces questions, tu vas devoir effectuer des boucles dans la console Rails. C'est peu commun mais c'est faisable, tout comme dans IRB.
-
-    puts en console tous les titres de AC/DC.
-      - Réponse: For Those About To Rock (We Salute You)
+puts en console tous les titres de AC/DC.
+      - Réponse: 
+For Those About To Rock (We Salute You)
 Put The Finger On You
 Lets Get It Up
 Inject The Venom
@@ -59,12 +58,13 @@ Problem Child
 Overdose
 Hell Aint A Bad Place To Be
 Whole Lotta Rosie
-      - Méthode: t = Track.where(artist: "AC/DC") ///
+      - Méthode: 
+t = Track.where(artist: "AC/DC")
 t.each do |track|
   puts track.title
 end
           
-    puts en console tous les titres de l'album "Let There Be Rock".
+puts en console tous les titres de l'album "Let There Be Rock".
       - Réponse:
 Go Down
 Dog Eat Dog
@@ -74,23 +74,26 @@ Problem Child
 Overdose
 Hell Aint A Bad Place To Be
 Whole Lotta Rosie
-      - Méthode:tracks = Track.where(album: "Let There Be Rock")
+      - Méthode:
+tracks = Track.where(album: "Let There Be Rock")
 tracks.each do |track|
    puts track.title
 end
-          
-    Calcule le prix total de cet album ainsi que sa durée totale.
+      
+Calcule le prix total de cet album ainsi que sa durée totale.
       - Réponse: 7.92$ ||| 40
-      - Méthode:(tracks = )Track.where(album: "Let There Be Rock").sum(:price).round(2)/sum(:duration)/60000.round(2)
-      tracks.sum(:price).round(2) ||| tracks.sum(:duration)/60000
+      - Méthode:
+(tracks = )Track.where(album: "Let There Be Rock").sum(:price).round(2)/sum(:duration)/60000.round(2)
+tracks.sum(:price).round(2) ||| tracks.sum(:duration)/60000
           
-    Calcule le coût de l'intégralité de la discographie de "Deep Purple".
+Calcule le coût de l'intégralité de la discographie de "Deep Purple".
       - Réponse: 90.09$
       - Méthode: Track.where(artist: "Deep Purple").sum(:price).round(2)
           
-    Modifie (via une boucle) tous les titres de "Eric Clapton" afin qu'ils soient affichés avec "Britney Spears" en artist.
+Modifie (via une boucle) tous les titres de "Eric Clapton" afin qu'ils soient affichés avec "Britney Spears" en artist.
       - Réponse: 32 titres modifiés
-      - Méthode: britney = Track.where(artist: "Eric Clapton")
+      - Méthode: 
+britney = Track.where(artist: "Eric Clapton")
 britney.each do |track|
    track.artist = "Britney Spears"
    track.save
